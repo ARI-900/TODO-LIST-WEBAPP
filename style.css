@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#mainContainer {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgb(93, 11, 235);
+    color: white;
+    padding-bottom: 20px;
+}
+
+#todo-title {
+    font-weight: bold;
+    text-align: center;
+    padding-block: 0.6rem 0.6rem;
+    background-color: #030e70c4;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.todo_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+input {
+    padding: 12px;
+    width: 300px;
+    outline: none;
+    border: 1px solid rgb(156, 156, 156);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: 800;
+    font-size: 14px;
+}
+#add_btn {
+    padding: 12px;
+    background-color: rgb(33, 156, 70);;
+    color: white;
+    border: 1px solid rgb(62, 61, 61);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#add_btn:hover {
+    background-color: rgb(207, 207, 11)
+}   
+
+
+#todo_Items {
+    min-height: 100%;
+    margin-top: 3rem;
+    width: 100%;
+    list-style: none;
+}
+.todo-item {
+    background-color: whitesmoke;
+    color: black;
+    margin: 1.3rem;
+    padding: 1rem 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.753);
+    border-radius: 10px;
+    border: none;
+    gap: 0.5rem;
+}
+
+span {
+    font-weight: 600;
+    color: teal;
+}
+span strong {
+    font-weight: bold;
+    font-size: large;
+    color: red;
+}
+.CrudClass {
+    display: flex;
+    justify-items: space-between;
+    align-items: center;
+    gap: 0.3em;
+}
+.edit-button {
+    background-color: #17a2b8;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.delete-button {
+    background-color: #c82333;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.edit-button:hover {
+    background-color: #138496;
+}
+
+
+/* mediaQuery */
+
+@media (max-width: 768px) {
+    .todo_form {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 3rem 2rem; 
+    }
+    input {
+        width: 100%;
+    }
+    #add_btn  {
+        width: 100%;
+        border-radius: 10px;
+    }
+    span {
+        font-weight: 600;
+        font-size: 13px;
+
+    }
+    span strong {
+        font-weight: 500;
+        font-size: 11px;
+    }
+
+    .edit-button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 10px;
+    }
+    .delete-button {
+        font-size: 10px;
+        padding: 5px 13px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .CrudClass {
+        gap: 0.2rem;
+    }
+}
